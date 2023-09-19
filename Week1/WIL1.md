@@ -81,3 +81,48 @@
 
 6장 웹 브라우저에서의 입출력
 ---
+(C++에서 확인할 수 있는 것과 매우 다른 부분)
+- 대화상자
+  - alert: 경고 대화상자
+  - prompt: 입력 대화상자
+  - confirm:확인 대화상자
+
+- console
+  - 콘솔에 텍스트 출력시: console.log(내용);
+  - 타임 측정: time과 timeEnd 사용
+
+- 이벤트 처리기 등록과 타이머
+  - 이벤트 처리기: 이벤트가 발생했을 때 실행되는 함수
+    - HTML 요소의 속성으로 등록/DOM 요소의 프로퍼티 등록/addEventListener 메소드 사용
+    - HTML: 주요 이벤트에 대한 이벤트 처리기 이름이 이미 있음 (표 6-4 참조, 플러터랑 비슷한 뉘앙스)
+    - DOM: 특정 id 속성 값을 가진 HTML 요소 객체를 가져와 함수 등록 (HTML보다 어려움, 초기 설정 함수 필요)
+  - 타이머: 지정된 시간이 흐른 후 함수 실행(setTimeout), 반복실행(setInterval) 등 가능
+ 
+- HTML 요소를 동적으로 읽고 쓰기
+  - 이벤트 처리기, 타이머 사용 (getElementByID+메소드를 주로 사용)
+  - innerHTML 프로퍼티로 읽고 쓰기 가능 -> 예제 6.3의 스톱워치 해석(stop, start 타임 등 함수 개별 설정)
+  - 폼 컨트롤의 입력값-> input 요소 등 사용자의 입력값을 JS에서 사용 가능
+
+- Canvas를 활용한 컴퓨터그래픽스
+  - window.onloadfmf 통해 캔버스 요소 가져오기 -> canvas 객체가 따로 있음.
+  - getContext를 통해 캔버스로 그림을 그릴 수 있음
+  - python의 turtle이랑 비슷한 듯 -> 다양한 메소드가 내장
+    - 둥근모서리 arcTo(x1, y1, x2, y2, radius) 등
+  - 이미지 객체 읽어오기도 가능
+    - var img = new Image() -> drawImage 메소드 사용
+
+7장 제어 구문
+---
+- 조건문
+  - if/else 문 (다른 언어와 마찬가지로 nested 사용 가능)
+  - switch-case-default 문
+  - break/return 문으로 분기 처리의 끝을 사용
+ 
+- 반복문
+  - while 문 (continue 사용 가능)
+  - for문 (C++과 동일)
+  - for/in 문 (파이썬과 동일)
+
+- 점프문
+  - 라벨문: 라벨이름 : 문장 -> 모든 식별자 사용 가능, break, continue문에서만 사용 가능
+    - ex: break loop; //loop라는 라벨로 점프
